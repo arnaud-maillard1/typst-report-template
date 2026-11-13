@@ -1,7 +1,7 @@
 #import "/metadata.typ": *
 #import "/tail/bibliography.typ": *
 #import "/tail/glossary.typ": *
-#show:make-glossary
+#show: make-glossary
 #register-glossary(entry-list)
 
 //-------------------------------------
@@ -23,7 +23,7 @@
   outset: (y: 3pt),
   radius: 2pt,
 )
-#show raw: set text(weight: "regular") 
+#show raw: set text(weight: "regular")
 
 //-------------------------------------
 // Content
@@ -40,19 +40,21 @@
 //-------------------------------------
 // Glossary
 //
-#make_glossary(gloss:gloss, title:i18n("gloss-title", lang: option.lang))
+#make_glossary(gloss: gloss, title: i18n("gloss-title", lang: option.lang))
 
 //-------------------------------------
 // Bibliography
 //
-#make_bibliography(bib:bib, title:i18n("bib-title", lang: option.lang))
+#make_bibliography(bib: bib, title: i18n("bib-title", lang: option.lang))
 
 
 //-------------------------------------
 // Appendix
 //
-#if appendix == true {[
-  #counter(heading).update(0)
-  #set heading(numbering:"A")
-  #include "/tail/a-appendix.typ"
-]}
+#if appendix == true {
+  [
+    #counter(heading).update(0)
+    #set heading(numbering: "A")
+    #include "/tail/a-appendix.typ"
+  ]
+}

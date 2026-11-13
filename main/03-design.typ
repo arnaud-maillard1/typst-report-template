@@ -3,7 +3,7 @@
 
 = Design
 
-#option-style(type:option.type)[
+#option-style(type: option.type)[
   This chapter defines the overall system architecture, core components, and interactions between different parts. The goal is to translate the specifications into a concrete, actionable blueprint for development.
 
   Key elements:
